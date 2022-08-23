@@ -12,15 +12,14 @@ namespace SalarioReajuste_Reply
             Console.WriteLine("Informe seu salário");
             salario = Convert.ToDouble(Console.ReadLine());
 
+            IFuncionario funcionario = new Funcionario();
 
-            IFuncionario salarioReajustado = new Funcionario();
+            double salarioReajustado  = funcionario.CalcularDescontosSalarios(salario);
 
-            double resultadoInss = salarioReajustado.CalucularInss(salario);
-            Console.WriteLine($"Seu salario com desconto do INSS é {resultadoInss.ToString("C")}");
+            Console.WriteLine($"Seu salario  é {salarioReajustado.ToString("C")}");
 
 
-            double resultadoImpostoRende = salarioReajustado.CalcularImpostoRenda(salario);
-            Console.WriteLine($"Seu salario com desconto do imposto de renda é {resultadoImpostoRende.ToString("C")}");
+          
 
 
             Console.ReadKey();

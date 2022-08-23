@@ -6,7 +6,7 @@ namespace SalarioReajuste_Reply
 {
     interface IFuncionario
     {
-        double CalcularImpostoRenda(double salario);
-        double CalucularInss(double salario);
+        double CalcularDescontosSalarios(double salario);
+       
     }
 }
